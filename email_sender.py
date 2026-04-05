@@ -84,7 +84,7 @@ def _complex_section(name: str, diff: dict) -> str:
     html      = f'<h3 style="margin:0 0 10px;font-size:14px"><a href="{home_url}">{name}</a></h3>'
 
     if not fetch_ok:
-        html += '<div class="alert-bar">⚠️ 今日页面抓取失败，请手动检查。</div>'
+        html += f'<div class="alert-bar">⚠️ 今日页面抓取失败（服务器拦截），请手动查看：<a href="{avail_url}">点击直达房源页</a></div>'
         return html
 
     new_u  = diff.get("new_units", [])
@@ -128,17 +128,33 @@ def build_html(date_str: str, new_listings: list, price_changes: list,
     # Zillow
     zillow_html = ""
     if not new_listings and not price_changes:
-        zillow_html = '<p class="empty">今日无新房源或价格变动。</p>'
+        zillow_html = (
+            '<p class="empty">今日无新房源或价格变动（或抓取被拦截）。</p>'
+            '<div style="font-size:13px;margin-top:6px">'
+            '直接搜索：'
+            '<a href="https://www.zillow.com/north-san-jose-san-jose-ca/rentals/2-_beds/2.0-_baths/">North San Jose</a>'
+            ' &nbsp;|&nbsp; '
+            '<a href="https://www.zillow.com/fremont-ca/rentals/2-_beds/2.0-_baths/">Fremont</a>'
+            '</div>'
+        )
     else:
         for l in new_listings:
             zillow_html += _zillow_card(l, "tag-new", "NEW")
         for l in price_changes:
             zillow_html += _zillow_card(l, "tag-price", "价格变动")
 
-    # Specific complexes
+    # Specific complexes — always show direct links even if scraping failed
+    COMPLEX_LINKS = {
+        "River View (Irvine Co.)": "https://www.irvinecompanyapartments.com/locations/northern-california/san-jose/river-view/availability.html",
+        "Vista 99 (Equity)":       "https://www.equityapartments.com/san-francisco-bay/north-san-jose/vista-99-apartments",
+    }
     complex_html = ""
     for name, diff in apt_diffs.items():
+        link = COMPLEX_LINKS.get(name, "#")
         complex_html += f'<div style="margin-bottom:20px">{_complex_section(name, diff)}</div>'
+    if not apt_diffs:
+        for name, link in COMPLEX_LINKS.items():
+            complex_html += f'<div style="margin-bottom:10px"><a href="{link}">{name} — 点击查看房源</a></div>'
 
     # Credit cards
     amex_html = "".join(_cc_card(i) for i in card_updates.get("amex", []))
