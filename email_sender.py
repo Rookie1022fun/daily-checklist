@@ -1,7 +1,7 @@
 import os
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+import urllib.request
+import urllib.error
+import json
 
 # ── Styling ───────────────────────────────────────────────────────────────────
 STYLE = """
@@ -183,20 +183,27 @@ def build_html(date_str: str, new_listings: list, price_changes: list,
 
 def send_report(date_str: str, new_listings: list, price_changes: list,
                 apt_diffs: dict, card_updates: dict) -> None:
-    gmail_user = os.environ["GMAIL_USER"]
-    gmail_pass = os.environ["GMAIL_APP_PASSWORD"]
-    recipient  = os.environ["RECIPIENT_EMAIL"]
+    api_key   = os.environ["RESEND_API_KEY"]
+    recipient = os.environ["RECIPIENT_EMAIL"]
 
     html = build_html(date_str, new_listings, price_changes, apt_diffs, card_updates)
 
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"每日速报 {date_str} — 湾区租房 + 信用卡"
-    msg["From"]    = gmail_user
-    msg["To"]      = recipient
-    msg.attach(MIMEText(html, "html", "utf-8"))
+    payload = json.dumps({
+        "from":    "Daily Checklist <onboarding@resend.dev>",
+        "to":      [recipient],
+        "subject": f"每日速报 {date_str} — 湾区租房 + 信用卡",
+        "html":    html,
+    }).encode()
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-        smtp.login(gmail_user, gmail_pass)
-        smtp.sendmail(gmail_user, recipient, msg.as_bytes())
-
-    print(f"  [email] Sent to {recipient}")
+    req = urllib.request.Request(
+        "https://api.resend.com/emails",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type":  "application/json",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req) as resp:
+        result = json.loads(resp.read())
+    print(f"  [email] Sent, id={result.get('id')} → {recipient}")

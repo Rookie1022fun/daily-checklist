@@ -29,9 +29,8 @@ jobs:
 
       - name: Run daily report
         env:
-          GMAIL_USER:         ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          RECIPIENT_EMAIL:    ${{ secrets.RECIPIENT_EMAIL }}
+          RESEND_API_KEY:  ${{ secrets.RESEND_API_KEY }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python main.py
 
       - name: Commit updated state
