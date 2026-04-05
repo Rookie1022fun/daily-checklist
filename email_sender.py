@@ -220,6 +220,10 @@ def send_report(date_str: str, new_listings: list, price_changes: list,
         },
         method="POST",
     )
-    with urllib.request.urlopen(req) as resp:
-        result = json.loads(resp.read())
-    print(f"  [email] Sent, id={result.get('id')} → {recipient}")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read())
+        print(f"  [email] Sent, id={result.get('id')} → {recipient}")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        raise RuntimeError(f"Resend API error {e.code}: {body}") from e
