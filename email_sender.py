@@ -1,7 +1,7 @@
-import os
-import urllib.request
-import urllib.error
 import json
+import os
+
+import requests as _requests
 
 # ── Styling ───────────────────────────────────────────────────────────────────
 STYLE = """
@@ -204,26 +204,20 @@ def send_report(date_str: str, new_listings: list, price_changes: list,
 
     html = build_html(date_str, new_listings, price_changes, apt_diffs, card_updates)
 
-    payload = json.dumps({
-        "from":    "Daily Checklist <onboarding@resend.dev>",
-        "to":      [recipient],
-        "subject": f"每日速报 {date_str} — 湾区租房 + 信用卡",
-        "html":    html,
-    }).encode()
-
-    req = urllib.request.Request(
+    resp = _requests.post(
         "https://api.resend.com/emails",
-        data=payload,
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type":  "application/json",
         },
-        method="POST",
+        json={
+            "from":    "Daily Checklist <onboarding@resend.dev>",
+            "to":      [recipient],
+            "subject": f"每日速报 {date_str} — 湾区租房 + 信用卡",
+            "html":    html,
+        },
+        timeout=30,
     )
-    try:
-        with urllib.request.urlopen(req) as resp:
-            result = json.loads(resp.read())
-        print(f"  [email] Sent, id={result.get('id')} → {recipient}")
-    except urllib.error.HTTPError as e:
-        body = e.read().decode()
-        raise RuntimeError(f"Resend API error {e.code}: {body}") from e
+    if not resp.ok:
+        raise RuntimeError(f"Resend API error {resp.status_code}: {resp.text}")
+    print(f"  [email] Sent, id={resp.json().get('id')} → {recipient}")
