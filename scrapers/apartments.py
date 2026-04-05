@@ -8,20 +8,11 @@ Both complexes are in North San Jose. We filter for 2B/2BA units.
 import hashlib
 import json
 import re
-import time
 
-import requests
 from bs4 import BeautifulSoup
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/122.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-}
+from scrapers.utils import fetch as _fetch_url
+
 
 COMPLEXES = {
     "River View (Irvine Co.)": {
@@ -50,14 +41,7 @@ COMPLEXES = {
 # ── helpers ───────────────────────────────────────────────────────────────────
 
 def _fetch(url: str) -> str | None:
-    try:
-        time.sleep(2)
-        r = requests.get(url, headers=HEADERS, timeout=30)
-        r.raise_for_status()
-        return r.text
-    except Exception as exc:
-        print(f"    fetch error ({url[:60]}...): {exc}")
-        return None
+    return _fetch_url(url)
 
 
 def _content_hash(text: str) -> str:
