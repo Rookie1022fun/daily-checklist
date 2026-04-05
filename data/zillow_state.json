@@ -1,4 +1,766 @@
 {
-  "North San Jose": [],
-  "Fremont": []
+  "North San Jose": [
+    {
+      "zpid": "37.40374--121.93292",
+      "address": "310 Crescent Village Cir, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/crescent-village-apartment-homes/5XjSSW/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.39865--121.920555",
+      "address": "600 Epic Way, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/epic/5Xn9bZ/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "440010306",
+      "address": "Rosemary Senior, 30 E Rosemary St #1B-1Ba-533Sqft, San Jose, CA 95112",
+      "price": "$1,850+/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 533,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/san-jose-ca/rosemary-senior/Ch2ggW/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.400093--121.92483",
+      "address": "345 Village Center Dr, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/elan-at-river-oaks/5XjLQF/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.402428--121.94297",
+      "address": "250 Brandon St, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/river-view-apartment-homes/CkQbR2/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.407707--121.93836",
+      "address": "3500 Palmilla Dr, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/north-park-apartment-homes/5XjLFd/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "452133839",
+      "address": "San Jose - Santa Clara, 2131 Gold St, Alviso, CA 95002",
+      "price": "$2,789+/mo",
+      "beds": 0,
+      "baths": 1,
+      "sqft": 300,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/san-jose-ca/san-jose-santa-clara/Cm5mGG/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.367737--121.91498",
+      "address": "1729 N 1st St, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/century-towers/CkBCHY/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.41359--121.9626",
+      "address": "4343 Renaissance Dr, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/enclave/5XqnRG/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.405045--121.93225",
+      "address": "3401 Iron Point Dr, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/aire/5ZQKZP/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.36446--121.90933",
+      "address": "1536 Kerley Dr, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/atrium-garden-apartment-homes-llc/5XjxNK/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.41478--121.95532",
+      "address": "1 Vista Montana, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/domain-apartments/5Xj7Kj/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "452131289",
+      "address": "San Jose - Downtown, 1560 N 1st St, San Jose, CA 95112",
+      "price": "$3,689+/mo",
+      "beds": 0,
+      "baths": 1,
+      "sqft": 300,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/san-jose-ca/san-jose-downtown/Cm5hgH/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "442993190",
+      "address": "Rosemary Family, 60 E Rosemary St #1B-1Ba-606Sqft, San Jose, CA 95112",
+      "price": "$2,202+/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 606,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/san-jose-ca/rosemary-family/Cjgrgg/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.413326--121.93843",
+      "address": "3700 Casa Verde St, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/the-verdant-apartments/5XsGhW/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.41194--121.941086",
+      "address": "121 E Tasman Dr, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/121-tasman/5Xt95w/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.412216--121.957664",
+      "address": "99 Vista Montana, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/vista-99/65bLm8/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.402157--121.92439",
+      "address": "373 River Oaks Cir, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/fountains-at-river-oaks/5Z4x3M/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "377870414",
+      "address": "GumTree Apartments, 2124 Park Ave #5fb893ab2, San Jose, CA 95126",
+      "price": "$2,270+/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": "N/A",
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/san-jose-ca/gumtree-apartments/CjhVCd/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.412796--121.941505",
+      "address": "175 Baypointe Pkwy, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/enso/5ZdvFP/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.366043--121.91071",
+      "address": "1700 N 1st St, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/san-jose-ca/waterford-place/5XjQRX/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "2089672789",
+      "address": "Venue Apartments, 3737 Casa Verde St APT 150, San Jose, CA 95134",
+      "price": "$3,251/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 824,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/san-jose-ca/venue-apartments/5j4Fm3/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "19489870",
+      "address": "745 Overture Ct, San Jose, CA 95134",
+      "price": "$3,400/mo",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 925,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/745-Overture-Ct-San-Jose-CA-95134/19489870_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.354748--121.91318",
+      "address": "1004 Airport Blvd, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/b/1004-airport-blvd-san-jose-ca-BdL9mM/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "19489101",
+      "address": "437 Camille Cir Unit 12, San Jose, CA 95134",
+      "price": "$4,795/mo",
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1710,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/437-Camille-Cir-UNIT-12-San-Jose-CA-95134/19489101_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.400517--121.92256",
+      "address": "425 Navaro Way, San Jose, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/b/425-navaro-way-san-jose-ca-5XtyFK/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "457721787",
+      "address": "251 Brandon St #Id1280558p, San Jose, CA 95134",
+      "price": "$7,371/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": "N/A",
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/251-Brandon-St-ID1280558P-San-Jose-CA-95134/457721787_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "19489647",
+      "address": "(undisclosed Address), San Jose, CA 95134",
+      "price": "$3,200/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 948,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/San-Jose-CA-95134/19489647_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "446956012",
+      "address": "(undisclosed Address), San Jose, CA 95126",
+      "price": "$3,275/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 331,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/San-Jose-CA-95126/446956012_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "461477393",
+      "address": "5105 Archangel Dr, San Jose, CA 95134",
+      "price": "$5,500/mo",
+      "beds": 4,
+      "baths": 4,
+      "sqft": 2300,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/5105-Archangel-Dr-San-Jose-CA-95134/461477393_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "19470274",
+      "address": "1579 Michigan Ave, San Jose, CA 95002",
+      "price": "$3,100/mo",
+      "beds": 3,
+      "baths": 1,
+      "sqft": 1168,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/1579-Michigan-Ave-San-Jose-CA-95002/19470274_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "19489656",
+      "address": "460 Navaro Way Unit 112, San Jose, CA 95134",
+      "price": "$3,500/mo",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1134,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/460-Navaro-Way-UNIT-112-San-Jose-CA-95134/19489656_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "340029765",
+      "address": "335 Elan Village Ln Floor 2-ID1214, San Jose, CA 95134",
+      "price": "$3,260/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 540,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/335-Elan-Village-Ln-FLOOR-2-ID1214-San-Jose-CA-95134/340029765_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "19489780",
+      "address": "622 Celebration Ct, San Jose, CA 95134",
+      "price": "$3,300/mo",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 925,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/622-Celebration-Ct-San-Jose-CA-95134/19489780_zpid/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "2106057976",
+      "address": "1196 Sherwood Ave #B, San Jose, CA 95126",
+      "price": "$3,495/mo",
+      "beds": 2,
+      "baths": 1,
+      "sqft": 1150,
+      "url": "https://www.zillow.comhttps://www.zillow.com/homedetails/1196-Sherwood-Ave-B-San-Jose-CA-95126/2106057976_zpid/",
+      "status": "FOR_RENT"
+    }
+  ],
+  "Fremont": [
+    {
+      "zpid": "37.547638--121.985535",
+      "address": "39176 Fremont Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/the-tolman/CjQydS/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.56419--122.003456",
+      "address": "37200 Paseo Padre Pkwy, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/vue-fremont/5XjT3C/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.576138--122.038574",
+      "address": "34077 Paseo Padre Pkwy, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/northgate-apartments/5XjW94/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.52937--121.98426",
+      "address": "39900 Blacow Rd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/sundale/5XkK5w/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "2130297009",
+      "address": "Coronado, 3777 Mowry Ave APT 1, Fremont, CA 94538",
+      "price": "$2,645/mo",
+      "beds": 2,
+      "baths": 1,
+      "sqft": 880,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/fremont-ca/coronado/5Xt548/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.557716--121.96471",
+      "address": "1001 Beethoven Cmn, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/alborada/5hFZNR/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.55579--121.98663",
+      "address": "38655 Paseo Padre Pkwy, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/sycamore-commons/5XjMv8/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.554764--121.96716",
+      "address": "1401 Red Hawk Cir, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/mission-peaks/5XjRcb/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.565983--122.05552",
+      "address": "5016 Paseo Padre Pkwy, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/ardenwood-forest-rental-condos/5XjKMn/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.56487--122.02288",
+      "address": "35995 Fremont Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/pinebrook-apts/5XkGGp/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.551624--121.98722",
+      "address": "3600 Pennsylvania Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/pennsylvania-apartments/5XjRTY/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.553936--122.01262",
+      "address": "4444 Hansen Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/metro-fremont/5XjR4Y/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "460363661",
+      "address": "Glenmills, 4444 Central Ave APT 116, Fremont, CA 94536",
+      "price": "$2,295/mo",
+      "beds": 1,
+      "baths": 1,
+      "sqft": 747,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/fremont-ca/glenmills/5Xk3Sc/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.5726--121.96725",
+      "address": "38416 Mission Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/niles-station/CnwmtR/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.554203--121.98538",
+      "address": "38800 Hastings St, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/ramblewood-apartments/5XjxbC/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.564026--122.02045",
+      "address": "36163 Fremont Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/brookvale-chateau/5XkGG3/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.56039--122.00964",
+      "address": "3888 Artist Walk Cmn, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/artist-walk-apartments/CkCPft/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.551437--121.988625",
+      "address": "38730 Lexington St, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/redwood-plaza-apartments/5XjQMH/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.56872--122.02371",
+      "address": "3750 Tamayo St, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/suburbian-gardens/5XjVmw/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.560833--121.97752",
+      "address": "38680 Waterside Cir, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/watermark-place/ChTtF5/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.549477--121.98097",
+      "address": "3510 Beacon Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/the-beacon/CjjCXS/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.538857--121.97601",
+      "address": "4261 Stevenson Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/lincoln-glen/5XkJjq/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.56628--122.021286",
+      "address": "36000 Fremont Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/casa-serena/5XjVtM/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.554424--122.01697",
+      "address": "4555 Thornton Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/countrywood-apartments/5XjVCZ/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.557827--121.9944",
+      "address": "38000 Camden St, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/camden-village/5XjN7c/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.554134--121.97326",
+      "address": "39410 Civic Center Dr, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/archstone-fremont-center/5Xk4BY/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.565342--122.00242",
+      "address": "2999 Sequoia Ter, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/creekside-village/635dWB/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.540184--121.98185",
+      "address": "4425 Bidwell Dr, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/windsor-garden-apartments/5XjKzy/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.530815--121.95523",
+      "address": "41240 Roberts Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/roberts-lane/5XjPyb/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.50264--121.94163",
+      "address": "45147 Lopes Rd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/aya-apartments/ChVWWY/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.537624--121.96058",
+      "address": "40777 High St, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/pebble-creek-communities/5XjLHm/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.542835--121.975784",
+      "address": "39800 Fremont Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/bidwell-park-fremont/5XjRbJ/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.53449--122.00209",
+      "address": "38850 Farwell Dr, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/glenmoor-green-apartments/5XjQWX/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "452099069",
+      "address": "Fremont - Warm Springs, 46312 Mission Blvd, Fremont, CA 94539",
+      "price": "$2,549+/mo",
+      "beds": 0,
+      "baths": 1,
+      "sqft": 300,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/fremont-ca/fremont-warm-springs/5XkK9v/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.557236--121.9648",
+      "address": "39451 Gallaudet Dr, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/mission-peaks-ii/5XjLCs/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.544525--121.97754",
+      "address": "39600 Fremont Blvd, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/waterstone-fremont/5XjR3F/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.53306--121.96426",
+      "address": "4200 Bay St, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/briarwood-at-central-park/5Xk4Js/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.500637--121.943794",
+      "address": "3301 Innovation Way, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/leya/CnhW4Q/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.56104--121.970955",
+      "address": "1031 Walnut Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/the-asher/ChtTJ5/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "37.557728--121.97187",
+      "address": "2000 Walnut Ave, Fremont, CA",
+      "price": "N/A",
+      "beds": "N/A",
+      "baths": "N/A",
+      "sqft": "N/A",
+      "url": "https://www.zillow.com/apartments/fremont-ca/the-presidio/5Xk3QQ/",
+      "status": "FOR_RENT"
+    },
+    {
+      "zpid": "452248687",
+      "address": "Fremont - Fremont Blvd. South, 46080 Fremont Blvd, Fremont, CA 94538",
+      "price": "$2,579+/mo",
+      "beds": 0,
+      "baths": 1,
+      "sqft": 300,
+      "url": "https://www.zillow.comhttps://www.zillow.com/apartments/fremont-ca/fremont-fremont-blvd.-south/Cm6kKq/",
+      "status": "FOR_RENT"
+    }
+  ]
 }
