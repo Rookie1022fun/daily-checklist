@@ -1,6 +1,5 @@
 import os
 import smtplib
-from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -19,6 +18,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
              font-size: 11px; font-weight: 600; margin-bottom: 4px; }
 .tag-new   { background: #d4edda; color: #155724; }
 .tag-price { background: #fff3cd; color: #856404; }
+.tag-gone  { background: #f8d7da; color: #721c24; }
+.tag-alert { background: #ffe0b2; color: #7b3f00; }
 .tag-amex  { background: #e3f2fd; color: #0d47a1; }
 .tag-chase { background: #fce4ec; color: #880e4f; }
 .card      { background: #f9f9f9; border-radius: 8px; padding: 12px 14px;
@@ -28,10 +29,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 .meta      { font-size: 12px; color: #888; margin-top: 4px; }
 .empty     { color: #aaa; font-style: italic; font-size: 14px; }
 .footer    { padding: 14px 30px; font-size: 12px; color: #aaa; text-align: center; }
+.alert-bar { background: #fff3cd; border-left: 4px solid #ffc107;
+             padding: 8px 12px; margin-bottom: 10px; border-radius: 4px;
+             font-size: 13px; }
 """
 
 
-def _listing_card(listing: dict, tag: str, label: str) -> str:
+# ── Zillow cards ──────────────────────────────────────────────────────────────
+
+def _zillow_card(listing: dict, tag: str, label: str) -> str:
     price_line = listing.get("price", "N/A")
     if tag == "tag-price":
         price_line = (
@@ -51,7 +57,62 @@ def _listing_card(listing: dict, tag: str, label: str) -> str:
     </div>"""
 
 
-def _card_news_card(item: dict, tag: str) -> str:
+# ── Specific complex section ──────────────────────────────────────────────────
+
+def _unit_row(unit: dict, tag: str, label: str) -> str:
+    price = unit.get("price", "N/A")
+    old_p = unit.get("old_price", "")
+    price_html = (
+        f'<s style="color:#aaa">{old_p}</s> &rarr; <strong>{price}</strong>'
+        if old_p else f"<strong>{price}</strong>"
+    )
+    avail = unit.get("avail", "")
+    return f"""
+    <div class="card">
+      <span class="tag {tag}">{label}</span>
+      <div>{unit.get('name','2B/2BA')} &nbsp;·&nbsp; {price_html}
+        {'&nbsp;·&nbsp; ' + unit.get('sqft','') + ' sqft' if unit.get('sqft','N/A') != 'N/A' else ''}
+        {'&nbsp;·&nbsp; 可入住: ' + avail if avail else ''}
+      </div>
+    </div>"""
+
+
+def _complex_section(name: str, diff: dict) -> str:
+    home_url  = diff.get("home_url", "#")
+    avail_url = diff.get("availability_url", "#")
+    fetch_ok  = diff.get("fetch_ok", True)
+    html      = f'<h3 style="margin:0 0 10px;font-size:14px"><a href="{home_url}">{name}</a></h3>'
+
+    if not fetch_ok:
+        html += '<div class="alert-bar">⚠️ 今日页面抓取失败，请手动检查。</div>'
+        return html
+
+    new_u  = diff.get("new_units", [])
+    gone_u = diff.get("gone_units", [])
+    chgs   = diff.get("price_changes", [])
+    changed = diff.get("page_changed", False)
+
+    if not new_u and not gone_u and not chgs:
+        if changed:
+            html += f'<div class="alert-bar">⚠️ 页面内容有变化，但未能解析出具体单元信息。' \
+                    f' <a href="{avail_url}">手动查看</a></div>'
+        else:
+            html += '<p class="empty">今日无变动。</p>'
+        return html
+
+    for u in new_u:
+        html += _unit_row(u, "tag-new", "NEW")
+    for u in chgs:
+        html += _unit_row(u, "tag-price", "价格变动")
+    for u in gone_u:
+        html += _unit_row(u, "tag-gone", "已下架")
+
+    return html
+
+
+# ── Credit card cards ─────────────────────────────────────────────────────────
+
+def _cc_card(item: dict) -> str:
     return f"""
     <div class="card">
       <div><a href="{item.get('url','#')}">{item.get('title','')}</a></div>
@@ -59,28 +120,32 @@ def _card_news_card(item: dict, tag: str) -> str:
     </div>"""
 
 
+# ── Main builder ──────────────────────────────────────────────────────────────
+
 def build_html(date_str: str, new_listings: list, price_changes: list,
-               card_updates: dict) -> str:
-    # ── Zillow section ────────────────────────────────────────────────────────
+               apt_diffs: dict, card_updates: dict) -> str:
+
+    # Zillow
     zillow_html = ""
     if not new_listings and not price_changes:
         zillow_html = '<p class="empty">今日无新房源或价格变动。</p>'
     else:
-        for listing in new_listings:
-            zillow_html += _listing_card(listing, "tag-new", "NEW")
-        for listing in price_changes:
-            zillow_html += _listing_card(listing, "tag-price", "价格变动")
+        for l in new_listings:
+            zillow_html += _zillow_card(l, "tag-new", "NEW")
+        for l in price_changes:
+            zillow_html += _zillow_card(l, "tag-price", "价格变动")
 
-    # ── Credit card sections ──────────────────────────────────────────────────
-    amex_html = ""
-    for item in card_updates.get("amex", []):
-        amex_html += _card_news_card(item, "tag-amex")
+    # Specific complexes
+    complex_html = ""
+    for name, diff in apt_diffs.items():
+        complex_html += f'<div style="margin-bottom:20px">{_complex_section(name, diff)}</div>'
+
+    # Credit cards
+    amex_html = "".join(_cc_card(i) for i in card_updates.get("amex", []))
     if not amex_html:
         amex_html = '<p class="empty">今日无 Amex 相关动态。</p>'
 
-    chase_html = ""
-    for item in card_updates.get("chase", []):
-        chase_html += _card_news_card(item, "tag-chase")
+    chase_html = "".join(_cc_card(i) for i in card_updates.get("chase", []))
     if not chase_html:
         chase_html = '<p class="empty">今日无 Chase 相关动态。</p>'
 
@@ -89,11 +154,16 @@ def build_html(date_str: str, new_listings: list, price_changes: list,
 <body><div class="container">
   <div class="header">
     <h1>每日信息速报</h1>
-    <p>{date_str} &nbsp;·&nbsp; North San Jose &amp; Fremont 租房 + 信用卡福利</p>
+    <p>{date_str} &nbsp;·&nbsp; North San Jose 重点公寓 + 湾区租房 + 信用卡福利</p>
   </div>
 
   <div class="section">
-    <h2>🏠 Zillow 2B2B 租房更新</h2>
+    <h2>🏠 重点公寓：River View &amp; Vista 99</h2>
+    {complex_html}
+  </div>
+
+  <div class="section">
+    <h2>🔍 Zillow 2B2B 周边新房源</h2>
     {zillow_html}
   </div>
 
@@ -107,17 +177,17 @@ def build_html(date_str: str, new_listings: list, price_changes: list,
     {chase_html}
   </div>
 
-  <div class="footer">由 GitHub Actions 自动生成 · 数据来源: Zillow, Doctor of Credit</div>
+  <div class="footer">由 GitHub Actions 自动生成 · 数据来源: Irvine Company, Equity Apartments, Zillow, Doctor of Credit</div>
 </div></body></html>"""
 
 
 def send_report(date_str: str, new_listings: list, price_changes: list,
-                card_updates: dict) -> None:
-    gmail_user  = os.environ["GMAIL_USER"]
-    gmail_pass  = os.environ["GMAIL_APP_PASSWORD"]
-    recipient   = os.environ["RECIPIENT_EMAIL"]
+                apt_diffs: dict, card_updates: dict) -> None:
+    gmail_user = os.environ["GMAIL_USER"]
+    gmail_pass = os.environ["GMAIL_APP_PASSWORD"]
+    recipient  = os.environ["RECIPIENT_EMAIL"]
 
-    html = build_html(date_str, new_listings, price_changes, card_updates)
+    html = build_html(date_str, new_listings, price_changes, apt_diffs, card_updates)
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"每日速报 {date_str} — 湾区租房 + 信用卡"
