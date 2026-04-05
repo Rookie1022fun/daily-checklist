@@ -1,0 +1,43 @@
+name: Daily Checklist Report
+
+on:
+  schedule:
+    # 10:30 AM PDT (UTC-7) = 17:30 UTC
+    # In winter (PST, UTC-8) this fires at 09:30 AM — adjust to 18:30 if needed
+    - cron: "30 17 * * *"
+  workflow_dispatch:  # allow manual trigger from GitHub Actions tab
+
+jobs:
+  daily-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit state back
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily report
+        env:
+          GMAIL_USER:         ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL:    ${{ secrets.RECIPIENT_EMAIL }}
+        run: python main.py
+
+      - name: Commit updated Zillow state
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/zillow_state.json
+          git diff --staged --quiet || git commit -m "chore: update zillow state $(date -u +%Y-%m-%d)"
+          git push
